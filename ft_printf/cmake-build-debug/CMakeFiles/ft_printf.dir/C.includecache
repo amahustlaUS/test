@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/anerus/Desktop/ft_printf/else.c
+ft_printf.h
+/home/anerus/Desktop/ft_printf/ft_printf.h
+
+/home/anerus/Desktop/ft_printf/ft_printf.h
+stdarg.h
+-
+stdio.h
+-
+unistd.h
+-
+stdlib.h
+-
+libft/libft.h
+/home/anerus/Desktop/ft_printf/libft/libft.h
+
+/home/anerus/Desktop/ft_printf/libft/libft.h
+unistd.h
+-
+stdlib.h
+-
+ctype.h
+-
+
