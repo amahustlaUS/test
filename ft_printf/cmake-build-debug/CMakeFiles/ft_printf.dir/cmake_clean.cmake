@@ -68,6 +68,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/ft_printf.dir/analysis.c.o"
   "CMakeFiles/ft_printf.dir/else.c.o"
   "CMakeFiles/ft_printf.dir/ft_printf.c.o"
+  "CMakeFiles/ft_printf.dir/handle_sign.c.o"
   "CMakeFiles/ft_printf.dir/main.c.o"
   "ft_printf.pdb"
   "ft_printf"

@@ -20,7 +20,8 @@ $(NAME):
 	@clang -I libft/ -o else.o -c else.c -g
 	@clang -I libft/ -o ft_printf.o -c ft_printf.c -g
 	@clang -I libft/ -o main.o -c main.c -g
-	@clang -o ft_printf ft_printf.o analysis.o else.o main.o -I libft/ -L libft/ -lft -g
+	@clang -I libft/ -o handle_sign.o -c handle_sign.c -g
+	@clang -o ft_printf handle_sign.o ft_printf.o analysis.o else.o main.o -I libft/ -L libft/ -lft -g
 clean:
 	@rm -rf ft_printf.o main.o analysis
 	@make -C libft/ clean

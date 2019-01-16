@@ -1,4 +1,4 @@
-# Install script for directory: /home/anerus/Desktop/ft_printf
+# Install script for directory: /home/anerus/Desktop/Git_Folder/ft_printf
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/anerus/Desktop/ft_printf/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/anerus/Desktop/Git_Folder/ft_printf/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

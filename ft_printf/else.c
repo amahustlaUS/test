@@ -1,6 +1,6 @@
 #include "ft_printf.h"
 
-void	mod_dig(const char *str)
+void	dig(const char *str)
 {
 	long	tmp;
 
@@ -16,7 +16,14 @@ void	mod_dig(const char *str)
 
 void	print_dig(void)
 {
-	if (g_g.flg.minus)
+	define_sign();
+	if (g_g.flg.zero)
+	{
+		print_sign();
+		print_width();
+		g_g.ret += write(1, g_g.str, ft_strlen(g_g.str));
+	}
+	else if (g_g.flg.minus)
 	{
 		print_sign();
 		g_g.ret += write(1, g_g.str, ft_strlen(g_g.str));
@@ -33,13 +40,10 @@ void	print_dig(void)
 
 void	print_sign(void)
 {
-	if (g_g.flg.plus)
-	{
-		if(g_g.str[0] != '-')
-		g_g.ret += write(1, "+", 1);
-	}
-	else if (g_g.flg.negative)
+		if (g_g.flg.negative)
 		g_g.ret += write(1, "-", 1);
+	else if(g_g.str[0] != '-')
+		g_g.ret += write(1, "+", 1);
 	else if (g_g.flg.space)
 		g_g.ret += write(1, " ", 1);
 }
@@ -61,11 +65,11 @@ void	print_width(void)
 	int len;
 
 	len = ft_strlen(g_g.str);
-	if (g_g.str[0] != '-')
-	if (g_g.flg.plus)
+	if (g_g.flg.plus || g_g.flg.space || g_g.flg.negative)
 		g_g.flg.width--;
 	while(g_g.flg.width - len++)
 	{
-		g_g.ret += write(1, " ", 1);
+		g_g.ret += g_g.flg.zero ? write(1, "0", 1) :
+		 write(1, " ", 1);
 	}
 }

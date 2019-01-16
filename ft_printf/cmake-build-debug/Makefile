@@ -48,10 +48,10 @@ RM = /snap/clion/58/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/anerus/Desktop/ft_printf
+CMAKE_SOURCE_DIR = /home/anerus/Desktop/Git_Folder/ft_printf
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/anerus/Desktop/ft_printf/cmake-build-debug
+CMAKE_BINARY_DIR = /home/anerus/Desktop/Git_Folder/ft_printf/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anerus/Desktop/ft_printf/cmake-build-debug/CMakeFiles /home/anerus/Desktop/ft_printf/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anerus/Desktop/Git_Folder/ft_printf/cmake-build-debug/CMakeFiles /home/anerus/Desktop/Git_Folder/ft_printf/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anerus/Desktop/ft_printf/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anerus/Desktop/Git_Folder/ft_printf/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -203,6 +203,33 @@ ft_printf.s: ft_printf.c.s
 ft_printf.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_printf.c.s
 .PHONY : ft_printf.c.s
+
+handle_sign.o: handle_sign.c.o
+
+.PHONY : handle_sign.o
+
+# target to build an object file
+handle_sign.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/handle_sign.c.o
+.PHONY : handle_sign.c.o
+
+handle_sign.i: handle_sign.c.i
+
+.PHONY : handle_sign.i
+
+# target to preprocess a source file
+handle_sign.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/handle_sign.c.i
+.PHONY : handle_sign.c.i
+
+handle_sign.s: handle_sign.c.s
+
+.PHONY : handle_sign.s
+
+# target to generate assembly for a file
+handle_sign.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/handle_sign.c.s
+.PHONY : handle_sign.c.s
 
 libft/ft_atoi.o: libft/ft_atoi.c.o
 
@@ -2031,6 +2058,9 @@ help:
 	@echo "... ft_printf.o"
 	@echo "... ft_printf.i"
 	@echo "... ft_printf.s"
+	@echo "... handle_sign.o"
+	@echo "... handle_sign.i"
+	@echo "... handle_sign.s"
 	@echo "... libft/ft_atoi.o"
 	@echo "... libft/ft_atoi.i"
 	@echo "... libft/ft_atoi.s"

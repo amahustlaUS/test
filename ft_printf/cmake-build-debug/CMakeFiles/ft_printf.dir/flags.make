@@ -6,5 +6,5 @@ C_FLAGS = -g   -std=gnu11
 
 C_DEFINES = 
 
-C_INCLUDES = -I/home/anerus/Desktop/ft_printf/. -I/home/anerus/Desktop/ft_printf/libft 
+C_INCLUDES = -I/home/anerus/Desktop/Git_Folder/ft_printf/. -I/home/anerus/Desktop/Git_Folder/ft_printf/libft 
 

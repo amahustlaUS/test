@@ -48,10 +48,10 @@ int		ft_printf(const char *format, ...);
 void	solve_printf(const char *s);
 void	flags_analys(const char *s);
 void	handle_str(const char *str);
-void	mod_dig(const char *str);
+void	dig(const char *str);
 void	print_dig(void);
 void	print_sign(void);
 void	print_width(void);
 int		get_nbr_len(int n);
-
+void	define_sign(void);
 #endif

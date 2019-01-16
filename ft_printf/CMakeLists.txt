@@ -78,4 +78,5 @@ add_executable(ft_printf
         else.c
         ft_printf.c
         ft_printf.h
+        handle_sign.c
         main.c)

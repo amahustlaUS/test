@@ -13,6 +13,10 @@ CMakeFiles/ft_printf.dir/ft_printf.c.o: ../ft_printf.c
 CMakeFiles/ft_printf.dir/ft_printf.c.o: ../ft_printf.h
 CMakeFiles/ft_printf.dir/ft_printf.c.o: ../libft/libft.h
 
+CMakeFiles/ft_printf.dir/handle_sign.c.o: ../ft_printf.h
+CMakeFiles/ft_printf.dir/handle_sign.c.o: ../handle_sign.c
+CMakeFiles/ft_printf.dir/handle_sign.c.o: ../libft/libft.h
+
 CMakeFiles/ft_printf.dir/libft/ft_atoi.c.o: ../libft/ft_atoi.c
 CMakeFiles/ft_printf.dir/libft/ft_atoi.c.o: ../libft/libft.h
 

@@ -19,6 +19,10 @@ void	solve_printf(const char *s)
 	flags_analys(s);
 	if (!s[g_g.i])
 		return ;
+	if (g_g.flg.minus)
+		g_g.flg.zero = 0;
+	if (g_g.flg.plus)
+		g_g.flg.space = 0;
 	//check_params(g);
 	//parse_str(s, g);
 	handle_str(s);
