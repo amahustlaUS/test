@@ -23,7 +23,7 @@ $(NAME):
 	@clang -I libft/ -o handle_sign.o -c handle_sign.c -g
 	@clang -o ft_printf handle_sign.o ft_printf.o analysis.o else.o main.o -I libft/ -L libft/ -lft -g
 clean:
-	@rm -rf ft_printf.o main.o analysis
+	@rm -rf ft_printf.o main.o analysis.o else.o handle_sign.o
 	@make -C libft/ clean
 fclean: clean
 	@rm -rf ft_printf
