@@ -56,5 +56,6 @@ int		ft_printf(const char *format, ...)
 		}
 	}
 	va_end(g_g.ap);
+	// system("leaks ft_printf");
 	return (g_g.ret);
 }

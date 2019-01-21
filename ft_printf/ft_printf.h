@@ -54,4 +54,9 @@ void	print_sign(void);
 void	print_width(void);
 int		get_nbr_len(int n);
 void	define_sign(void);
+void	handle_precision(const char *str);
+void	assign_digit(const char *str);
+void	precision_and_sign(void);
+void	validate_mods(const char *str);
+
 #endif
