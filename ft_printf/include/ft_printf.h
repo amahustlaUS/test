@@ -5,7 +5,7 @@
 # include <stdio.h>
 # include <unistd.h>
 # include <stdlib.h>
-# include "libft/libft.h"
+# include "../libft/libft.h"
 
 typedef	enum	e_mod
 {
@@ -48,7 +48,7 @@ int		ft_printf(const char *format, ...);
 void	solve_printf(const char *s);
 void	flags_analys(const char *s);
 void	handle_str(const char *str);
-void	dig(const char *str);
+void	dig(/*const char *str*/);
 void	print_dig(void);
 void	print_sign(void);
 void	print_width(void);

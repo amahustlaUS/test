@@ -17,7 +17,6 @@ void	precision_and_sign(void)
 {
 	int len;
 	char *tmp;
-	char *buf;
 	int i;
 
 	define_sign();

@@ -10,22 +10,55 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME = libftprintf
+C = clang
+
+NAME = libftprintf.a
+
+FLAGS = -Wall -Wextra -Werror -O2
+
+LIBFT = libft
+
+DIR_S = sources
+
+DIR_O = temporary
+
+HEADER = include
+
+SOURCES = ft_printf.c \
+		  analysis.c \
+		  else.c \
+		  handle_sign.c \
+
+SRCS = $(addprefix $(DIR_S)/,$(SOURCES))
+
+OBJS = $(addprefix $(DIR_O)/,$(SOURCES:.c=.o))
 
 all: $(NAME)
 
-$(NAME):
-	@make -C libft/ fclean && make -C libft/
-	@clang -I libft/ -o analysis.o -c analysis.c -g
-	@clang -I libft/ -o else.o -c else.c -g
-	@clang -I libft/ -o ft_printf.o -c ft_printf.c -g
-	@clang -I libft/ -o main.o -c main.c -g
-	@clang -I libft/ -o handle_sign.o -c handle_sign.c -g
-	@clang -o ft_printf handle_sign.o ft_printf.o analysis.o else.o main.o -I libft/ -L libft/ -lft -g
+$(NAME): $(OBJS)
+	@make -C $(LIBFT)
+	@cp libft/libft.a ./$(NAME)
+	@ar rc $(NAME) $(OBJS)
+	@ranlib $(NAME)
+
+$(DIR_O)/%.o: $(DIR_S)/%.c
+	@mkdir -p temporary
+	@$(CC) $(FLAGS) -I $(HEADER) -o $@ -c $<
+
+norme:
+	norminette ./libft/
+	@echo
+	norminette ./$(HEADER)/
+	@echo
+	norminette ./$(DIR_S)/
+
 clean:
-	@rm -rf ft_printf.o main.o analysis.o else.o handle_sign.o
-	@make -C libft/ clean
+	@rm -f $(OBJS)
+	@rm -rf $(DIR_O)
+	@make clean -C $(LIBFT)
+
 fclean: clean
-	@rm -rf ft_printf
-	@make -C libft/ fclean
+	@rm -f $(NAME)
+	@make fclean -C $(LIBFT)
+
 re: fclean all

@@ -16,6 +16,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <ctype.h>
+# include <limits.h>
 
 typedef struct		s_list
 {
@@ -80,8 +81,7 @@ void				ft_putendl(char const *s);
 void				ft_putendl_fd(char const *s, int fd);
 void				ft_putnbr_fd(int num, int fd);
 void				ft_putnbr(int num);
-char				*ft_itoa(int n);
-char				*ft_itoa(int n);
+char				*ft_itoa(long n);
 char				*ft_strtrim(char const *s);
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
 size_t				ft_word_count(char const *s, char c);
